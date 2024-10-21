@@ -8,7 +8,8 @@ const dbconnection = mysql2.createPool({
   host : process.env.HOST,
   password: process.env.DBPASSWORD,
   connectionLimit: 5,
-  port: 8889,
+  //uncomment the below port for local development
+  //port: 8889,
 });
 //const result =  dbconnection.execute("select 'test' ");
 
