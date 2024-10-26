@@ -33,28 +33,35 @@ const Header = () => {
         <ul className={styles.navLinks}>
           {isLoggedIn ? (
             <>
+              {/* ___________________________________________________ */}
               <li className={styles.navLinkItem}>
                 <Link to="/">Home</Link>
               </li>
+              {/* ___________________________________________________ */}
               <li className={styles.navLinkItem}>
                 <Link to="/how-it-works">How it works</Link>
               </li>
+              {/* ___________________________________________________ */}
               <li className={styles.navLinkItem}>
                 <button className={styles.logoutButton} onClick={onLogoutClick}>
                   Log Out
                 </button>
               </li>
+              {/* ___________________________________________________ */}
             </>
           ) : (
             <>
+              {/* ___________________________________________________ */}
               <li className={styles.navLinkItem}>
                 <Link to="/how-it-works">How it works</Link>
               </li>
+              {/* ___________________________________________________ */}
               <li className={styles.navLinkItem}>
                 <Link to="/login" className={styles.signInButton}>
                   Sign In
                 </Link>
               </li>
+              {/* ___________________________________________________ */}
             </>
           )}
         </ul>
@@ -71,16 +78,19 @@ const Header = () => {
           <ul>
             {isLoggedIn ? (
               <>
+                {/* ___________________________________________________ */}
                 <li onClick={() => setMobileMenuOpen(false)}>
                   <Link to="/">
                     <FontAwesomeIcon icon={faHome} /> Home
                   </Link>
                 </li>
+                {/* ___________________________________________________ */}
                 <li onClick={() => setMobileMenuOpen(false)}>
                   <Link to="/how-it-works">
                     <FontAwesomeIcon icon={faHome} /> How it works
                   </Link>
                 </li>
+                {/* ___________________________________________________ */}
                 <li
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -89,19 +99,23 @@ const Header = () => {
                 >
                   <FontAwesomeIcon icon={faSignOutAlt} /> Log Out
                 </li>
+                {/* ___________________________________________________ */}
               </>
             ) : (
               <>
+                {/* ___________________________________________________ */}
                 <li onClick={() => setMobileMenuOpen(false)}>
                   <Link to="/how-it-works">
                     <FontAwesomeIcon icon={faHome} /> How it works
                   </Link>
                 </li>
+                {/* ___________________________________________________ */}
                 <li onClick={() => setMobileMenuOpen(false)}>
                   <Link to="/login">
                     <FontAwesomeIcon icon={faSignInAlt} /> Sign In
                   </Link>
                 </li>
+                {/* ___________________________________________________ */}
               </>
             )}
           </ul>
